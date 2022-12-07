@@ -26,22 +26,7 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        //serializes data for handlebars
-        const blogPosts = blogData.map((posts) => posts.get({ plain: true }));
-        console.log(blogPost);
-        res.render('homepage', {
-            blogPosts,
-            logged_in: req.session.logged_in
-        });
-
-    } catch (err) {
-
-        res.status(500).json(err);
-    }
-});
-
-
-// a specific blog post
+        // a specific blog post
 router.get('/post/:id', withAuth, async (req, res) => {
     try {
         if (!req.session.logged_in) {
@@ -170,6 +155,23 @@ router.get('/login', (req, res) => {
     }
     res.render('login');
 });
+
+        //serializes data for handlebars
+        const blogPosts = blogData.map((posts) => posts.get({ plain: true }));
+        console.log(blogPost);
+        res.render('homepage', {
+            blogPosts,
+            logged_in: req.session.logged_in
+        });
+
+    } catch (err) {
+
+        res.status(500).json(err);
+    }
+});
+
+
+
 
 module.exports = router;
 
