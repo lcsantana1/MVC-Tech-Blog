@@ -17,10 +17,15 @@
 
   ## Usage
   
-  Deployed Link with Heroku:
- 
+  Deployed Link with Heroku: https://rocky-sands-28171.herokuapp.com/
+  
+  
+  ![Screen Shot 2022-12-10 at 4 00 05 PM](https://user-images.githubusercontent.com/106941418/206878566-49d9306a-d4d7-45eb-a810-d4d48bbbe2ed.png)
 
+ 
   # Tests
+  
+  After cloning this repo, run npm i and then npm start in terminal.
 
 
   # Questions
